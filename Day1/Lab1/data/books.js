@@ -1,6 +1,6 @@
-  var books = [
+var books = [
     {
-        "isbn":"9781593279509",
+        "ISBN":"9781593279509",
         "title":"Eloquent JavaScript, Third Edition",
         "subtitle":"A Modern Introduction to Programming",
         "categories": "Programming",
@@ -18,7 +18,7 @@
           }
     },
     {
-        "isbn":"9781491943533",
+        "ISBN":"9781491943533",
         "title":"Practical Modern JavaScript",
         "subtitle":"Dive into ES6 and the Future of JavaScript",
         "categories": "Programming",
@@ -36,7 +36,7 @@
           }
     },
     {
-        "isbn":"9781593277574",
+        "ISBN":"9781593277574",
         "title":"Understanding ECMAScript 6",
         "subtitle":"The Definitive Guide for JavaScript Developers",
         "categories": "Programming",
@@ -54,7 +54,7 @@
           }
     },
     {
-        "isbn":"9781449365035",
+        "ISBN":"9781449365035",
         "title":"Speaking JavaScript",
         "subtitle":"An In-Depth Guide for Programmers",
         "categories": "Programming",
@@ -72,7 +72,7 @@
           }
     },
     {
-        "isbn":"9781449331818",
+        "ISBN":"9781449331818",
         "title":"Learning JavaScript Design Patterns",
         "subtitle":"A JavaScript and jQuery Developer's Guide",
         "categories": "Programming",
@@ -90,7 +90,7 @@
           }
     },
     {
-        "isbn":"9798602477429",
+        "ISBN":"9798602477429",
         "title":"You Don't Know JS Yet",
         "categories": "Programming",
         "subtitle":"Get Started",
@@ -108,7 +108,7 @@
           }
     },
     {
-        "isbn":"9781484200766",
+        "ISBN":"9781484200766",
         "title":"Pro Git",
         "subtitle":"Everything you neeed to know about Git",
         "categories": "Programming",
@@ -126,7 +126,7 @@
           }
     },
     {
-        "isbn":"9781484242216",
+        "ISBN":"9781484242216",
         "title":"Rethinking Productivity in Software Engineering",
         "categories": "Programming",
         "subtitle":"",
@@ -534,4 +534,4 @@
           "displayValue": "8.99"
         }
       }
-];
+]
