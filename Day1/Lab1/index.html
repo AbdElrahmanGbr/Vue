@@ -14,53 +14,115 @@
     
 </head>
 <body>
-  <main id="mainapp">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container">
-        <a class="navbar-brand" href="#">Book Store</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Books <span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-          </ul>
-          <form class="d-flex my-2 my-lg-0">
-            <input class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+  <main id="mainwrapper" class="container-fluid">
+      <nav
+        class="d-flex bg-dark justify-content-between text-light p-2 my-2 align-items-baseline"
+      >
+        <a href="#" class="link" @click="isBookVisable = true"> Books </a>
+        <div class="d-flex align-items-baseline">
+          <p class="px-2">
+            {{ wishlist.length }} 
+            <span v-show="wishlist.length > 1">Books</span> 
+            <span v-show="wishlist.length == 1">Book</span>  with total price {{ formatCurrency(getTotalPrice()) }}</p>
+          <div class="btn btn-primary" @click="changeIsVisible">
+            Wished List
+          </div>
         </div>
-      </div>
-    </nav>
-    <section>
-      <!-- display the books in ul list from js/books.js -->
-      <div class="d-flex container-fluid mt-3 ml-3">
-        <div class="row bg-dark text-white">
-          <ul v-for="book in books" class="col m-3 p-5">
-            <li style="list-style-type: none;"><img :src="book.image" :alt="book.title" :title="book.title"></li>
-            <li class="fs-4">{{book.title}}</li>
-            <li class="fs-5">{{book.author}}</li>
-            <li class="fs-5">{{book.categories}}</li>
-            <li>{{ formatCurrency(book.price.value) }}</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
+      </nav>
+      <div
+        class="row d-flex justify-content-between align-items-baseline"
+        v-if="isBookVisable"
+      >
+        <div
+          v-for="book in books"
+          class="d-flex my-3 mx-3 align-items-baseline card col-12 col-sm-6 col-md-4 col-lg-3"
+          :class="[
+            book.NumberOfPages < 50 ? 'less' : 'more',
+          ]"
 
+        >
+          <div class="row">
+            <img
+              class="col-12"
+              :src="book.image"
+              :alt="book.title"
+              :title="book.title"
+            />
+            <p class="my-2 btn-primary col-12 text-center m-auto">
+              Title: {{book.categories}}
+            </p>
+            <p class="col-12 text-center btn-primary m-auto">
+              Author: {{book.author}}
+            </p>
+            <p class="my-2 col-6 text-center btn-warning m-auto">
+              N.O.P: {{book.NumberOfPages}}
+            </p>
+            <p class="col-6 text-center btn-danger m-auto">
+              price: {{ formatCurrency(book.price.value) }}
+            </p>
+            <p class="my-2 col-12 text-center btn-primary m-auto">
+              ISBN: {{book.ISBN}}
+            </p>
+            <button
+              class="col-12 btn btn-primary"
+              @click="addToWishList(book)"
+              :disabled="isWished(book)"
+            >
+              Add To WIsh list
+            </button>
+          </div>
+        </div>
+      </div>
+      <span class="war"> </span>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        v-if="!isBookVisable && wishlist.length == 0"
+      >
+        You're Wishlist is Empty! Please add some books to your Wishlist! 😞 <br> back to store.. <button class="btn btn-primary" @click="isBookVisable = true">Back</button>
+      </div>
+      <table class="table" v-if="!isBookVisable && wishlist.length != 0">
+        <thead>
+          <tr>
+            <th scope="col">ISBN</th>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Author</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="book in wishlist">
+            <td scope="col">{{book.ISBN}}</td>
+            <td scope="col">{{book.title}}</td>
+            <td scope="col">{{book.categories}}</td>
+            <td scope="col">{{book.author}}</td>
+            <td scope="col">{{ formatCurrency(book.price.value) }}</td>
+            <td>
+              <div class="btn btn-danger" @click="removeBook(book)">Remove</div>
+              <a href="bookdetails.html">
+              <div class="btn btn-primary" @click="getBook(isbn)">Show</div></a>
+            </td>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Total Price</td>
+            <td colspan="2">{{ formatCurrency(getTotalPrice()) }}</td>
+          </tr>
+          <tr>
+            <td colspan="4">Taxis</td>
+            <td colspan="2">{{ formatCurrency(getTotalPrice() * 0.1) }}</td>
+          </tr>
+          <tr>
+            <td colspan="4">Grand Total </td>
+            <td colspan="2">{{ formatCurrency(getTotalPrice() * 1.1) }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
     
     
     <!-- (Optional) Use CSS or JS implementation -->

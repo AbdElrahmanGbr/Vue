@@ -7,7 +7,7 @@ var books = [
         "author":"Marijn Haverbeke",
         "published":"2018-12-04T00:00:00.000Z",
         "publisher":"No Starch Press",
-        "pages":472,
+        "NumberOfPages":472,
         "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
         "website":"http://eloquentjavascript.net/",
         "image": "https://eloquentjavascript.net/img/cover.jpg",
@@ -25,7 +25,7 @@ var books = [
         "author":"Nicolás Bevacqua",
         "published":"2017-07-16T00:00:00.000Z",
         "publisher":"O'Reilly Media",
-        "pages":334,
+        "NumberOfPages":20,
         "description":"To get the most out of modern JavaScript, you need learn the latest features of its parent specification, ECMAScript 6 (ES6). This book provides a highly practical look at ES6, without getting lost in the specification or its implementation details.",
         "website":"https://github.com/mjavascript/practical-modern-javascript",
         "image": "https://camo.githubusercontent.com/18565999d9ce20a73f987f933e1f73586d16dd676f492c99fc9f121c376a210a/68747470733a2f2f692e696d6775722e636f6d2f476254634475562e706e67",
@@ -43,7 +43,7 @@ var books = [
         "author":"Nicholas C. Zakas",
         "published":"2016-09-03T00:00:00.000Z",
         "publisher":"No Starch Press",
-        "pages":352,
+        "NumberOfPages":30,
         "description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
         "website":"https://leanpub.com/understandinges6/read",
         "image": "https://d2sofvawe08yqg.cloudfront.net/understandinges6/s_hero?1620418785",
@@ -61,7 +61,7 @@ var books = [
         "author":"Axel Rauschmayer",
         "published":"2014-04-08T00:00:00.000Z",
         "publisher":"O'Reilly Media",
-        "pages":460,
+        "NumberOfPages":460,
         "description":"Like it or not, JavaScript is everywhere these days -from browser to server to mobile- and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
         "website":"http://speakingjs.com/",
         "image": "http://speakingjs.com/speakingjs_cover.jpg",
@@ -79,7 +79,7 @@ var books = [
         "author":"Addy Osmani",
         "published":"2012-08-30T00:00:00.000Z",
         "publisher":"O'Reilly Media",
-        "pages":254,
+        "NumberOfPages":254,
         "description":"With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
         "website":"http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
         "image": "https://www.patterns.dev/img/remote/Z2dzbwc-640w.avif",
@@ -97,7 +97,7 @@ var books = [
         "author":"Kyle Simpson",
         "published":"2020-01-28T00:00:00.000Z",
         "publisher":"Independently published",
-        "pages":143,
+        "NumberOfPages":143,
         "description":"The worldwide best selling You Don't Know JS book series is back for a 2nd edition: You Don't Know JS Yet. All 6 books are brand new, rewritten to cover all sides of JS for 2020 and beyond.",
         "website":"https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started",
         "image": "https://github.com/getify/You-Dont-Know-JS/raw/2nd-ed/get-started/images/cover.png",
@@ -115,7 +115,7 @@ var books = [
         "author":"Scott Chacon and Ben Straub",
         "published":"2014-11-18T00:00:00.000Z",
         "publisher":"Apress; 2nd edition",
-        "pages":458,
+        "NumberOfPages":458,
         "description":"Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro.",
         "website":"https://git-scm.com/book/en/v2",
         "image": "https://git-scm.com/images/progit2.png",
@@ -130,10 +130,10 @@ var books = [
         "title":"Rethinking Productivity in Software Engineering",
         "categories": "Programming",
         "subtitle":"",
-        "author":"Caitlin Sadowski, Thomas Zimmermann",
+        "author":"Caitlin Sadowski",
         "published":"2019-05-11T00:00:00.000Z",
         "publisher":"Apress",
-        "pages":310,
+        "NumberOfPages":30,
         "description":"Get the most out of this foundational reference and improve the productivity of your software teams. This open access book collects the wisdom of the 2017 \"Dagstuhl\" seminar on productivity in software engineering, a meeting of community leaders, who came together with the goal of rethinking traditional definitions and measures of productivity.",
         "website":"https://doi.org/10.1007/978-1-4842-4221-6",
         "image": "https://media.springernature.com/w92/springer-static/cover/book/978-1-4842-4221-6.jpg",
@@ -146,7 +146,7 @@ var books = [
     {
         "ISBN": 9789000307975,
         "categories": "Detective and Mystery",
-        "NumberOfPages": 150,
+        "NumberOfPages": 40,
         "title": "Vrienden voor het leven",
         "author": "Maeve Binchy",
         "summary": "Vrienden voor het leven is het verhaal van drie vriendinnen die op weg naar volwassenheid verwikkeld raken in een zonderlinge driehoeksverhouding. Benny en Eve, boezemvriendinnen uit het Ierse dorpje Knockglen, gaan in Dublin studeren en sluiten daar al snel vriendschap met de aantrekkelijke en ambitieuze Nan. Het opwindende studentenleven brengt hun echter niet alleen geluk maar ook verdriet. Met haar grote vermogen om menselijke gevoelens herkenbaar neer te zetten weet Maeve Binchy geluk en verdriet, warmte en humor samen te brengen in deze meeslepende roman. Vrienden voor het leven verscheen voor het eerst in 1991 en is het favoriete boek van vele Maeve Binchy-fans. Het boek is inmiddels toe aan de zeventiende druk. In 1995 werd het zeer succesvol verfilmd onder de titel Circle of Friends met Minnie Driver en Chris O’Donnell in de hoofdrollen.",
@@ -240,20 +240,7 @@ var books = [
           "displayValue": "48.99"
         }
       },
-      {
-        "ISBN": 9780751548525,
-        "categories": "Art and Photography",
-        "NumberOfPages": 300,
-        "title": "Safe Haven",
-        "author": "Nicholas Sparks",
-        "summary": "Love hurts. There is nothing as painful as heartbreak. But in order to learn to love again you must learn to trust again. When a mysterious young woman named Katie appears in the small town of Southport, her sudden arrival raises questions about her past. Beautiful yet unassuming, Katie is determined to avoid forming personal ties until a series of events draws her into two reluctant relationships. Despite her reservations, Katie slowly begins to let down her guard, putting down roots in the close-knit community. But even as Katie starts to fall in love, she struggles with the dark secret that still haunts her ...",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/0/5/2/3/9200000010683250.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 33.8,
-          "displayValue": "33.80"
-        }
-      },
+
       {
         "ISBN": 9789023429258,
         "categories": "Art and Photography",
@@ -308,48 +295,6 @@ var books = [
           "currency": "EUR",
           "value": 14.95,
           "displayValue": "14.95"
-        }
-      },
-      {
-        "ISBN": 9789044309904,
-        "categories": "Film",
-        "NumberOfPages": 120,
-        "title": "Hou je mond!",
-        "author": "Sophie Kinsella",
-        "summary": "Emma heeft, zoals alle jonge vrouwen ter wereld, een paar geheimpjes. Voor haar ouders, haar vriend, haar collega's. Zo werd ze ontmaagd in de logeerkamer terwijl haar ouders een film zaten te kijken en ze vindt haar vriend Connor een beetje op Ken lijken. Die van Barbie en Ken. Ze geeft de plant van haar irritante collega sinaasappelsap - bijna dagelijks - en haar string doet pijn. Emma is altijd nerveus als ze moet vliegen. Daarom vertelt ze al haar geheimen zomaar aan een ardige vreemde man die naast haar in het vliegtuig zit. Tenminste, Emma denkt dat het een vreemde is. Want wanneer ze de volgende dag op haar werk komt... Sophie Kinsella is bestsellerschrijfster en journaliste. Ze woont in Londen. Ze heeft weinig grote geheimen, behalve dat ze niet dol is op vliegen.",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/8/3/1/6/1001004002056138.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 10,
-          "displayValue": "10.00"
-        }
-      },
-      {
-        "ISBN": 9789023467786,
-        "categories": "Thriller",
-        "NumberOfPages": 180,
-        "title": "In een mens",
-        "author": "John Irving",
-        "summary": "In een mens is een meeslepende roman over verlangen, geheimhouding en seksuele identiteit. Een boek over de liefde in al haar verschijningsvormen en een gepassioneerd betoog voor seksuele verscheidenheid. Billy, de biseksuele hoofdpersoon, vertelt het tragikomische verhaal (dat meer dan vijf decennia beslaat) van zijn leven als ‘seksuele verdachte’, een term die John Irving voor het eerst gebruikte in zijn onsterfelijke roman De wereld volgens Garp. Dit is John Irvings meest politieke roman sinds De regels van het ciderhuis en Bidden wij voor Owen Meany en een treffend eerbetoon aan Billy’s vrienden en minnaars – een bonte verzameling personages die de lezer niet licht zal vergeten. Het is een onvergetelijk portret van de eenzame, biseksuele man die zich voorgenomen heeft om 'echt belangrijk' te zijn.",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/0/7/8/7/9200000000037870.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 19.9,
-          "displayValue": "19.90"
-        }
-      },
-      {
-        "ISBN": 9780751548556,
-        "categories": "Comic Book or Graphic Novel",
-        "NumberOfPages": 300,
-        "title": "The lucky one",
-        "author": "Nicholas Sparks",
-        "summary": "Do you believe in lucky charms? While in Iraq, U.S. Marine Logan Thibault finds a photo, half-buried in the dirt, of a woman. He carries it in his pocket, and from then on his luck begins to change. Back home, Logan is haunted by thoughts of war. Over time, he becomes convinced that the woman in the photo holds the key to his destiny. So he finds the vulnerable and loving Beth and a passionate romance begins. But Logan battles with the one secret he has kept from Beth: how he found her in the first place. And it is a secret that could utterly destroy everything they love ...",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/7/0/3/7/1001004011797307.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 9.8,
-          "displayValue": "9.80"
         }
       },
       {
@@ -423,23 +368,9 @@ var books = [
         }
       },
       {
-        "ISBN": 9789044339482,
-        "categories": "Adventure",
-        "NumberOfPages": 200,
-        "title": "De Tennisparty",
-        "author": "Sophie Kinsella",
-        "summary": "Het tennisweekend is Patricks idee. Zijn nieuwe landhuis, gekocht met de bonussen van zijn baan als beleggingsadviseur, is de ideale locatie. Patricks vrouw Caroline weet nog niet wat de werkelijke reden voor het feestje is. Zij vindt het leuk om haar oude buren Stephen en Annie weer te zien, maar ze is minder blij met de snoeverige Charles en zijn verwende vrouw Cressida. En het laatste koppel, Don en Valerie, beiden bloedfanatiek, is helemaal onuitstaanbaar. Terwijl de vier stellen zich op het zonnige terras installeren, lijkt al vast te staan wie de winnaars zijn in het leven en wie de verliezers. Maar wanneer de eerste bal over het net wordt geslagen, is dat het begin van twee dagen flirten, driftbuien, knallende ruzies en schokkende onthullingen. Door de komst van een ongenode gast wordt duidelijk dat dit weekend helemaal niets met tennis te maken heeft. Lang voordat ze beroemd werd met haar Shopaholic! serie schreef Sophie Kinsella onder haar eigen naam, Madeleine Wickham, zeven romans. De tennis party, haar allereerste boek, verscheen toen ze pas vierentwintig was en is daarom altijd heel bijzonder voor haar gebleven. Daarna volgden onder andere Het zwemfeestje en De vraagprijs. Haar werk is in meer dan dertig talen verschenen. De auteur woont met haar man en kinderen in Londen. 'Een rake roman met scherpe observaties. Licht maar dodelijk.' Mail on Sunday",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/3/7/6/4/9200000009984673.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 18.5,
-          "displayValue": "18.50"
-        }
-      },
-      {
         "ISBN": 9780552778459,
         "categories": "Education",
-        "NumberOfPages": 180,
+        "NumberOfPages": 40,
         "title": "In One Person",
         "author": "John Irving",
         "summary": "A compelling novel of desire, secrecy, and sexual identity, In One Person is a story of unfulfilled love—tormented, funny, and affecting—and an impassioned embrace of our sexual differences. Billy, the bisexual narrator and main character of In One Person, tells the tragicomic story (lasting more than half a century) of his life as a “sexual suspect,” a phrase first used by John Irving in 1978 in his landmark novel of “terminal cases,” The World According to Garp. His most political novel since The Cider House Rules and A Prayer for Owen Meany, John Irving’s In One Person is a poignant tribute to Billy’s friends and lovers—a theatrical cast of characters who defy category and convention. Not least, In One Person is an intimate and unforgettable portrait of the solitariness of a bisexual man who is dedicated to making himself 'worthwhile.'",
@@ -453,7 +384,7 @@ var books = [
       {
         "ISBN": 9789400501157,
         "categories": "Education",
-        "NumberOfPages": 160,
+        "NumberOfPages": 20,
         "title": "De aanslag",
         "author": "David Baldacci",
         "summary": "Will Robie is een van de besten in zijn vak, een huurmoordenaar die nooit twijfelt en altijd zijn doelwit uitschakelt. Hij is de man op wie de Amerikaanse overheid een beroep doet als het gaat om het doden van haar grootste vijanden, van de monsters die talloze onschuldige slachtoffers op hun naam hebben staan. En niemand is zo goed als Robie. Niemand, behalve Jessica Reel... Reel is net als Robie zeer ervaren, uiterst professioneel en dodelijk precies. Maar Reel heeft zich tegen haar werkgever gekeerd en het vizier gericht op haar voormalige collega’s binnen hun agentschap. Nu een van hun eigen mensen moet worden afgestopt, doet men opnieuw een beroep op Robie. Zijn opdracht: zorg dat je Reel te pakken krijgt, levend of dood. Maar wanneer Robie de jacht opent op Reel, ontdekt hij al snel dat zij weleens gegronde redenen kan hebben voor haar verraad. De aanslagen op het agentschap houden verband met een veel groter gevaar. Een gevaar dat Washington D.C., de Verenigde Staten en de rest van de wereld op de grondvesten zal doen schudden...",
@@ -464,20 +395,7 @@ var books = [
           "displayValue": "19.99"
         }
       },
-      {
-        "ISBN": 9789044339338,
-        "categories": "Adventure",
-        "NumberOfPages": 160,
-        "title": "Mag ik je nummer even?",
-        "author": "Sophie Kinsella",
-        "summary": "Poppy Wyatt is haar verlovingsring kwijt! Een antiek geval, al drie generaties in het bezit van de familie van Magnus, haar aanstaande. Over tien dagen is de bruiloft! En terwijl ze buiten met haar vriendinnen staat te bellen, wordt haar mobieltje plotseling uit haar handen gegrist. Ook dat nog! Nu is de crisis compleet. Wat moet ze zonder telefoon beginnen? Helemaal hyper denkt Poppy dat ze aan het hallucineren is geslagen wanneer ze in een afvalbak zomaar een smartphone ziet liggen. Hebbes! Maar het duurt niet lang voor de eigenaar, de botte zakenman Sam Roxton, zich meldt. En Sam is 'not amused' als Poppy ijskoud weigert haar schat aan hem af te staan.",
-        "image": "http://s.s-bol.com/imgbase0/imagebase/large/FC/3/0/9/4/9200000009984903.jpg",
-        "price": {
-          "currency": "EUR",
-          "value": 10,
-          "displayValue": "10.00"
-        }
-      },
+
       {
         "ISBN": 9789022556627,
         "categories": "Literary Fiction",

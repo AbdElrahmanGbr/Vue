@@ -1,20 +1,39 @@
-console.log(books);
 
 let app = Vue.createApp({
     data() {
         return {
+            isBookVisable: true,
+            message: "test",
             books: books,
+            wishlist:[],
         }
     },
     methods: {
+        addToWishList(book){
+            this.wishlist.push(book);
+        },
+        isWished(book) {
+            return this.wishlist.some(wbook => wbook.ISBN == book.ISBN) ;
+        },
+        removeBook(book) {
+            this.wishlist.splice(this.wishlist.findIndex(wbook => wbook.ISBN == book.ISBN), 1);
+        },
         formatCurrency(value) {
             return (new Intl.NumberFormat('ar-SA', { 
                 style: 'currency', 
                 currency: 'SAR', 
             }).format(value));
         },
-    },
-    mounted() {
+        getTotalPrice() {
+            let totalPrice = 0;
+            this.wishlist.forEach(book => totalPrice += book.price.value);
+            return totalPrice;
+        },
+        changeIsVisible(){
+            this.isBookVisable = !this.isBookVisable;
+        },
+        getBook(isbn) {
+            return this.books.find(book => book.ISBN == isbn);
+        }
     }
-
-}).mount('#mainapp');
+}).mount('#mainwrapper');

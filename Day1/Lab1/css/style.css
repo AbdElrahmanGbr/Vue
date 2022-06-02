@@ -1,4 +1,12 @@
 img{
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 650px;
+}
+.more {
+    border: 2px solid darkcyan;
+    background-image: linear-gradient(to bottom, transparent 50%, rgb(38, 139, 255));
+}
+.less {
+    border: 2px solid red;
+    box-shadow: 0 0 3rem rgb(100, 1, 1);
 }
