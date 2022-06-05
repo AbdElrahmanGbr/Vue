@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="mainwrapper" v-cloak>
+        <!-- <p>{{getMessage}}</p> -->
+        <!-- <p @click="getMessage">Information Technology Institute</p> -->
+        <!-- <p @click="getMessage">Information Technology Institute</p> -->
+        <!-- <p @click="saluteMe('Hlbessa', $event)">Welcome</p> -->
+        <!-- <button @click="counter += 1">Increase</button>
+        <p>{{counter}}</p>
+        <h3>{{getMessage()}}</h3> -->
+        <!-- <button @click="message='Open Source'">Change Message To Open Source</button> -->
+        <button @click="getMessage='Open Source'">Change Message To Open Source</button>
+
+    </div>
+
+    <script>
+        const app=Vue.createApp({
+            data:()=>({
+                message:'Hello World',
+                branch:'monfia',
+                counter:0,
+        }),
+        methods:{
+            saluteMe(value,data){
+                alert(`Data: ${data}`);
+                alert(`Hello ${value}, Data: {$data.target.innerText}`);
+            }
+        },
+        /*getMessage(data){
+            alert(`Data: ${data}`);
+            //alert("from get message");
+            alert(this.message);
+            return this.message.toUpperCase();
+            console.log(data.target.innerText);
+        },*/
+        computed:{
+            /*getMessage(){
+                alert("from get message");
+                return this.message.toUpperCase();
+            }*/
+            /*getMessage:{
+                set(newValue){
+                    alert("from setter with value: "+newValue);
+                    if(newValue>3){
+                        this.message=newValue;
+                    }else{
+                        this.message="Open Source not allowed";
+                }
+                },
+                get(){
+                    alert("from getter");
+                    return this.message.toUpperCase();
+                }
+            }*/
+        }
+    });
+        app.mount('#mainwrapper');
+    </script>
+    <script src="./vueversion3.js"></script>
+</body>
+</html>

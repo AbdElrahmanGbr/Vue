@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vueversion3.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="mainwrapper" class="container">
+        <div class="row g-0">
+            <form action="#" class="col-12 w-75 m-auto">
+                <div class="input-group my-2">
+                    <i class="fa-solid fa-newspaper input-group-prepend input-group-text"></i>
+                    <input type="text" class="form-control" placeholder="Title" v-model="post.title">
+                </div>
+                <div class="col-12 text-center">
+                    <textarea class="form-control" placeholder="description" v-model="post.description"></textarea>
+                </div>
+                <div class="col-12 my-2">
+                    <select class="form-select" v-model="post.edition">
+                        <option :value="edition" v-for = "edition in postData.editions">{{edition}}</option>
+                    </select>
+                </div>
+                <div class="col-12 my-2">
+                    <label for="" class="text-primary">ShareOn: </label>
+                    <div v-for="social in postData.shareon">
+                        <input type="checkbox" v-model="post.shareon" :value="social" v-model="post.shareon">&nbsp;&nbsp;&nbsp;{{social}}
+                    </div>
+                </div>
+                <div class="col-12 my-2">
+                    <label for="" class="text-primary">Category: </label>
+                    <div v-for="category in postData.categories">
+                        <input type="radio" v-model="post.category" :value="category" v-model="post.category">&nbsp;&nbsp;&nbsp;{{category}}
+                    </div>
+                </div>
+                <div class="col-12 my-2">
+                    <label for="" class="text-primary">Send Immediatly: </label>
+                    <br>                        
+                    <input type="checkbox" v-model="post.sendImmediatly">
+                </div>
+            </form>
+        </div>
+        <!-- end of form -->
+        <div class="row g-0">
+            <div class="col-12">
+                    <label for="posttitle"> <span class="text-danger">Title:</span> {{post.title}}</label>
+            </div>
+            <div class="col-12">
+                    <label for="postdescription"><span class="text-danger">Description:</span> {{post.description}}</label>
+            </div>
+            <div class="col-12">
+                    <label for="postedition"><span class="text-danger">Edition:</span> {{post.edition}}</label>
+            </div>
+            <div class="col-12">
+                <label for=""><span class="text-danger">Shareon:</span></label>
+                <ul>
+                    <li v-for="social in post.shareon">{{social}}</li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <label for=""><span class="text-danger">Category:</span></label>
+                <ul>
+                    <li v-for="category in post.category">{{category}}</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end of mainwrapper -->
+    
+
+
+    <script>
+        Vue.createApp({
+            data:()=>({
+                post:{
+                    title:'',
+                    category:'',
+                    description:'',
+                    sendImmediatly:false,
+                    shareon:[],
+                    edition:'',
+                },
+                postData:{
+                    categories:["SWE", "UIUX", "Development"],
+                    shareon:["Facebook", "Twitter", "G+"],
+                    editions:["FirstEdition", "SecondEdition", "ThirdEdition"],
+
+                }
+
+            }),
+            methods:{
+
+            }
+        }).mount('#mainwrapper');
+    </script>
+
+</body>
+</html>
